@@ -1,0 +1,36 @@
+ [
+    {
+        "image": "../../public/img/blue-snow-nails.png",
+        "alt": "Mão de uma senhora com unhas francesas à frente de um cenário cinzento. Unhas com pontas azuis, verniz transparente e desenhos de flocos de neve a branco. No cenário pode-se ler a frase 'Release Emotions' ('Liberte Emoções')" 
+    },
+    { 
+        "image": "../../public/img/lipton-nails.png",
+         "alt": "Mão de uma senhora a segurar um Lipton Ice Tea de pêssego. Unhas curtas, quadradas com degradê laranja para amarelo. No dedo anelar, vê-se uma palmeira desenhada a preto" 
+    },
+    { 
+        "image": "../../public/img/checkered-nails.png", 
+        "alt": "Mão de uma senhora com unhas extremamente longas, pintadas de bege e com padrão xadrez a preto e branco nas pontas." 
+    },
+    { 
+        "image": "../../public/img/mermaid-nails.png",
+        "alt": "Unhas cor de rosa com pontas pontiagudas. Unhas com tema de sereia com desenho de escamas a dourado, apliques de conchas e brilhantes."},
+    { 
+        "image": "../../public/img/diamond-nails.png",
+        "alt": "Mão de uma senhora, vestida com uma blusa de algodão, com unhas longas e redondas nas pontas. Unhas com degradê rosa para branco. No dedo do médio, vê-se um aplique de diamante, com forma de coração, que ocupa metade da unha." },
+    { 
+        "image": "../../public/img/orange-flower-nails.png",
+        "alt": "Mão de uma senhora com unhas curtas. Unhas transparentes, com a ponta branca. No meio tem duas rosas laranjas desenhadas." 
+    },
+    { 
+        "image": "../../public/img/jewel-nails.png",
+        "alt": "Unhas longas, pontiagudas, prateadas. Unhas com apliques prateados com joias azuis." 
+    },
+    { 
+        "image": "../../public/img/pink-sparkle-nails.png",
+        "alt": "Mãos de uma senhora a segurar um verniz cor-de-rosa com efeito translúcido. Unhas curtas, pintada de cor-de-rosa, translúcidas. No dedo anelar, vêem-se apliques holográficos." 
+    },
+    { 
+        "image": "../../public/img/grey-black-flame-nails.png",
+        "alt": "Mãos de uma senhora, vestida com um casaco de ganga cinzento. Unhas longas, quadradas, pintadas de cinzento, com desenhos de chamas, a preto, e apliques brilhantes." 
+    }
+  ]
