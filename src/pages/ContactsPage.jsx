@@ -57,7 +57,7 @@ const ContactsPage = () => {
 
         <section className="qr-code">
           <p>Também pode aceder ao nosso Instagram através do QRCode:</p>
-          <img src='../../public/img/contacts-qrcode.png' alt="QR Code do Instagram do salão U Nail" />
+          <img src='/img/contacts-qrcode.png' alt="QR Code do Instagram do salão U Nail" />
         </section>
 
         <Footer />
