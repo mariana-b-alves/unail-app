@@ -4,7 +4,7 @@ import productData from '../../data/productData.json';
 import TransactionDone from './TransactionDone.jsx';
 import TransactionErr from './TransactionErr.jsx';
 import PropTypes from 'prop-types';
-import emailjs from '@emailjs/browser'; // ✅ EMAILJS IMPORT
+import emailjs from '@emailjs/browser';
 import '../../styles/form.css';
 import '../../styles/trans_done_err.css';
 
@@ -82,7 +82,7 @@ const TransactionForm = ({ onClose }) => {
       total: totalPrice,
     };
 
-    /*FETCH EMAILJS - WAY WE'RE SENDING OUR EMAIL*/
+    /*EMAILJS - THE WAY WE'RE SENDING OUR EMAIL - FOR THAT WE'LL NEED THE SERVICE_API, TEMPLATE_API, AND PUBLIC_KEY*/
     emailjs.send(
       'service_zh2f7l8',
       'template_qhokq32',
