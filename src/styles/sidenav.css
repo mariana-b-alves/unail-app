@@ -87,9 +87,3 @@
     background-size: 28% 0.07em;
   }
 }
-
-@media screen and (min-width: 800px) {
-  .sideNav, .overlay {
-      display: none !important;
-  }
-}
