@@ -23,7 +23,7 @@ const StoreArticles = ({ categories, searchTerm, filteredProducts }) => {
                   </figure>
                   <p>{description}</p>
                   <p>{title}</p>
-                  <p>{price.toFixed(2)}€</p>
+                  <p style={{marginBottom: '4.7em'}}>{price.toFixed(2)}€</p>
                 </article>
               ))}
           </section>

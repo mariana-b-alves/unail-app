@@ -20,7 +20,7 @@
     border-radius: 20px;
   }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
     .portfolio{
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: 50vh;

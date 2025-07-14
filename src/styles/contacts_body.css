@@ -29,7 +29,7 @@ section.contacts p, section.qr-code p, section.contact-form p{
 
 /********MEDIA QUERIES********/
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 1000px){
     section.contacts, section.contact-form{
         display: inline-block; 
 

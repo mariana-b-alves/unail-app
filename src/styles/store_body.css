@@ -74,12 +74,9 @@ section.store p:nth-of-type(3){
 }
 
 
-article.content p:nth-of-type(5){
-    padding-bottom: 1.85em;
-    font-weight: 600;
-    font-size: 1.3em;
+section.store p:nth-of-type(5){
+    padding-top: 4em;
 }
-
 
 /********NTH-OF-TYPE STYLES********/
 
@@ -87,7 +84,7 @@ section.store:nth-of-type(6){
     padding-bottom: 10em;
 }
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 1000px){
     section.store{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
@@ -97,8 +94,6 @@ section.store:nth-of-type(6){
         display: flex;
         flex-direction: column;
     }
-
-
 
       .content{
         margin-left: 5em;

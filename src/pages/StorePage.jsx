@@ -41,7 +41,7 @@ const StorePage = () => {
             <h1>LOJA</h1>
           </section>
 
-        <main style={{ flex: "1" }}>
+        <main>
           <section className="searchBarSection">
             <i className="fa-solid fa-magnifying-glass"></i>
             <input
@@ -82,8 +82,8 @@ const StorePage = () => {
           </div>
         </div>
       )}
-
       <Footer />
+      
     </>
   );
 }

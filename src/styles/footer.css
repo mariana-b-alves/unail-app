@@ -70,7 +70,7 @@ footer section > svg:hover{
     border: 2px solid #57402c
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
     footer{
         flex-direction: row;
     }

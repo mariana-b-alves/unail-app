@@ -82,7 +82,7 @@ section.prices:nth-of-type(8){
 }
 
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 1000px){
     section.prices{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
