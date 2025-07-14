@@ -1,9 +1,10 @@
 import { useContext, useState } from 'react';
-import { CartContext } from './CartContext.jsx';
+import { CartContext } from './CartContext';
 import productData from '../../data/productData.json';
 import TransactionDone from './TransactionDone.jsx';
 import TransactionErr from './TransactionErr.jsx';
 import PropTypes from 'prop-types';
+import emailjs from '@emailjs/browser'; // ✅ EMAILJS IMPORT
 import '../../styles/form.css';
 import '../../styles/trans_done_err.css';
 
@@ -24,7 +25,7 @@ const TransactionForm = ({ onClose }) => {
     };
   });
 
-   /*TOTALPRICE - MULTIPLY THE AMOUNT SELECTED OF ALL INDIVIDUAL ITEMS BY THEIR PRICE, AND KEEP THE FINAL NUMBER WITH 2 DECIMAL PLACES*/
+  /*TOTALPRICE - MULTIPLY THE AMOUNT SELECTED OF ALL INDIVIDUAL ITEMS BY THEIR PRICE, AND KEEP THE FINAL NUMBER WITH 2 DECIMAL PLACES*/
   const totalPrice = productsInCart
     .reduce((sum, item) => sum + item.price * item.quantity, 0)
     .toFixed(2);
@@ -44,7 +45,7 @@ const TransactionForm = ({ onClose }) => {
   const [showModal, setShowModal] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  //REGISTER THE USER'S TYPING AND UPDATES THE FORM WITH WHAT THE USER WRITERS
+  //REGISTER THE USER'S TYPING AND UPDATES THE FORM WITH WHAT THE USER WRITES
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -58,7 +59,6 @@ const TransactionForm = ({ onClose }) => {
     setIsSubmitting(true);
 
     /*CREATE AN EMAIL FORMAT SO WE CAN SEND TO OUR USER WITH THE FULL INFO*/
-
     const cartData = productsInCart.map(item => {
       return `
         Título do Produto: ${item.title}
@@ -70,44 +70,47 @@ const TransactionForm = ({ onClose }) => {
       `;
     }).join("\n\n");
 
-    const payload = {
-      customer: formData,
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      address: formData.address,
+      city: formData.city,
+      district: formData.district,
+      postal: formData.postal,
+      taxPayerNumber: formData.taxPayerNumber,
       cart: cartData,
       total: totalPrice,
     };
 
-    /*FETCH FORMSPREE - WAY WE'RE SENDING OUR EMAIL*/
-    fetch('https://formspree.io/f/xldnzjyd', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    })
-
-    /*IF THE EMAIL WAS SUCCESSFULLY SENT, THE FORM (AND SHOPPING CART) ARE CLEARED AND TRANSACTION DONE (success msg)IS SHOWN...*/
-      .then((res) => {
-        if (res.ok) {
-          setIsTransactionSuccess(true);
-          clearCart();
-          setFormData({
-            name: '',
-            email: '',
-            address: '',
-            city: '',
-            district: 'placeholder',
-            postal: '',
-            taxPayerNumber: '',
-          });
-        /*...OTHERWISE, TRANSACTION ERR (ERROR MSG) IS SHOWN AND the FORM (AND SHOPPING CART) ARE NOT CLEARED*/
-        } else {
-          setIsTransactionSuccess(false);
-        }
-        setShowModal(true);
+    /*FETCH EMAILJS - WAY WE'RE SENDING OUR EMAIL*/
+    emailjs.send(
+      'service_zh2f7l8',
+      'template_qhokq32',
+      templateParams,
+      'Iyc8DiekNWhaQ2V81'
+    )
+      /*IF THE EMAIL WAS SUCCESSFULLY SENT, THE FORM (AND SHOPPING CART) ARE CLEARED AND TRANSACTION DONE IS SHOWN...*/
+      .then(() => {
+        setIsTransactionSuccess(true);
+        clearCart();
+        setFormData({
+          name: '',
+          email: '',
+          address: '',
+          city: '',
+          district: 'placeholder',
+          postal: '',
+          taxPayerNumber: '',
+        });
       })
+      /*...OTHERWISE, TRANSACTION ERR (ERROR MSG) IS SHOWN AND the FORM (AND SHOPPING CART) ARE NOT CLEARED*/
       .catch(() => {
         setIsTransactionSuccess(false);
-        setShowModal(true);
       })
-      .finally(() => setIsSubmitting(false));
+      .finally(() => {
+        setShowModal(true);
+        setIsSubmitting(false);
+      });
   };
 
   //OPENS OVERLAY WHEN THE TRANSACTION FORM'S OPEN: OTHERWISE IT CLOSES IT
@@ -325,6 +328,5 @@ const TransactionForm = ({ onClose }) => {
 TransactionForm.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
-
 
 export default TransactionForm;
