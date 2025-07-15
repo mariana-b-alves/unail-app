@@ -35,12 +35,12 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  /*REMOVE A/THE PRODUCT TO CART*/
+  /*REMOVE A/THE PRODUCT FROM CART*/
   const removeFromCart = (id, color) => {
     setCartItems(prev => prev.filter(item => !(item.id === id && item.color === color)));
   };
 
-  /*ADD/REMOVE AN ITEM IS ALREADY INSIDE THE CART BY CHECKING ITS ID/COLOUR*/
+  /*ADD/REMOVE AN ITEM THAT'S ALREADY INSIDE THE CART BY CHECKING ITS ID AND/OR COLOUR*/
   const updateQuantity = (id, color, quantity) => {
     setCartItems(prev =>
       prev.map(item =>
@@ -54,7 +54,7 @@ export const CartProvider = ({ children }) => {
   /*CLEAR CART*/
   const clearCart = () => setCartItems([]);
 
-  /*CHECK IF AN ITEM IS ALREADY INSIDE THE CART BY CHECKING ITS ID/COLOUR*/
+  /*CHECK IF AN ITEM IS ALREADY INSIDE THE CART BY CHECKING ITS ID AND/OR COLOUR*/
   const isInCart = (id, color) => cartItems.some(item => item.id === id && item.color === color);
 
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);

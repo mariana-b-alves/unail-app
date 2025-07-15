@@ -37,7 +37,7 @@ const HomePage = () => {
         <main style={{ flexGrow: 1 }}>
           <section className="banner">
             <article>
-              <img src="/img/unail-logo-brown.png" alt="Unail Logo Brown" />
+              <img src="/img/unail-logo-brown.png" alt="Unail Logo Brown"/>
               <p style={{ fontSize: '1.5rem' }}>Life is not perfect, but your nails can be</p>
               <Link to="/contacts" className="btn">CONTACTE-NOS</Link>
             </article>

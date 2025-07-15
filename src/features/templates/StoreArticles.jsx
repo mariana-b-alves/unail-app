@@ -4,8 +4,8 @@ const StoreArticles = ({ categories, searchTerm, filteredProducts }) => {
   return (
     <>
       {Object.entries(categories).map(([title, items]) => (
-        //DYNAMICALLY ADDS THE SUBTITLES ABOVE THE PRODUCT
         <section key={title}>
+         {/*DYNAMICALLY ADDS THE SUBTITLES ABOVE THE PRODUCT*/}
           <section className="subtitle"><h1>{title}</h1></section>
           {/*SEARCH BAR WITH FILTER*/}
           <section className="store">
@@ -17,6 +17,7 @@ const StoreArticles = ({ categories, searchTerm, filteredProducts }) => {
               .map(({ id, description, title, price, image, details }) => (
                 <article key={id}>
                   <figure className="c1xr3">
+                    {/*DIRECT THE USER TO A LINK WITH ITS RESPECTIVE PRODUCT WITH the /product/[id] PATH*/}
                     <a href={`/product/${id}`}>
                       <img src={image} alt={details} />
                     </a>

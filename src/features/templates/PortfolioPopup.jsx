@@ -22,13 +22,13 @@ const PortfolioPopup = () => {
 
     {/*IMAGES*/}
       <section className="portfolio">
-        {portfolioImages.map((img, index) => (
-          <figure key={index}>
+        {portfolioImages.map((item, img) => (
+          <figure key={img}>
             <img
               className="all-img"
-              src={img.image}
-              alt={img.alt}
-              onClick={() => setSelectedImage(img)}
+              src={item.image}
+              alt={item.alt}
+              onClick={() => setSelectedImage(item)}
               style={{ cursor: 'pointer' }}
             />
           </figure>

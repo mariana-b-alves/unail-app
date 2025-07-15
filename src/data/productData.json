@@ -12,7 +12,7 @@
     "id": "1",
     "title": "One Bottle, One Color",
     "price": 169.00,
-    "image": "img/onebottle-onecolor.jpg",
+    "image": "../img/onebottle-onecolor.jpg",
     "description": "KIT DE VERNIZES DE GEL",
     "details": "Kit completo com 60 cores. Secagem rápida e sem odores."
   },
@@ -20,7 +20,7 @@
     "id": "2",
     "title": "White Moonlight Pearl Powder",
     "price": 3.00,
-    "image": "img/white-moonlight-powder.png",
+    "image": "../img/white-moonlight-powder.png",
     "description": "PÓ PARA NAIL ART",
     "details": "Pó para nail art com efeito perlado."
   },
@@ -28,7 +28,7 @@
     "id": "3",
     "title": "Cristais de Cor Mistas",
     "price": 29.90,
-    "image": "img/mixed-shape-crystals.jpg",
+    "image": "../img/mixed-shape-crystals.jpg",
     "description": "APLIQUES",
     "details": "Tamanho: 6mm-14mm; Pague 100, leve 210."
   },
@@ -36,7 +36,7 @@
     "id": "4",
     "title": "Pincéis para Nail Art",
     "price": 24.90,
-    "image": "img/nailart-small-brushes.jpg",
+    "image": "../img/nailart-small-brushes.jpg",
     "description": "PINCÉIS",
     "details": "Pincéis para Nail Art - 8 tamanhos."
   },
@@ -44,7 +44,7 @@
     "id": "5",
     "title": "Aerógrafo para Nail Art",
     "price": 59.90,
-    "image": ".img/nailart-airbrush.jpg",
+    "image": "../img/nailart-airbrush.jpg",
     "description": "AERÓGRAFO",
     "details": "Aerógrafo com carregador USB. Várias cores disponíveis.",
     "colors": ["#ffb6c1", "#000000", "#cf2f3e"]
@@ -53,7 +53,7 @@
     "id": "6",
     "title": "Broca de Unhas Portátil.",
     "price": 49.00,
-    "image": "img/nail-drill.png",
+    "image": "../img/nail-drill.png",
     "description": "BROCA",
     "details": "Broca de Unhas Portátil. Velocidade rápida e sem ruídos. Até 12h de bateria"
   }

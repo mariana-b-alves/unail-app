@@ -66,7 +66,6 @@ const ProductDetail = () => {
     </div>
   );
 
-  /*SAME AS JS*/
   return (
     <div>
       <Header

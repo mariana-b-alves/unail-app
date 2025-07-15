@@ -1,7 +1,6 @@
 import '../../styles/form.css';
 import PropTypes from 'prop-types';
 
-
 const TransactionErr = ({ onClose }) => {
   return (
     <section className="transactionErr open" onClick={onClose}>

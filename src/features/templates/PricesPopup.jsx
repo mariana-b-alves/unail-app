@@ -16,19 +16,19 @@ const PricesPopup = () => {
 
   return (
     <section className="prices">
-      {pricesImages.map((img, index) => (
-        <figure key={index}>
+      {pricesImages.map((item, img) => (
+        <figure key={img}>
           <img
             className="all-img"
-            src={img.image}
-            alt={img.alt}
-            onClick={() => setSelectedImage(img)}
+            src={item.image}
+            alt={item.alt}
+            onClick={() => setSelectedImage(item)}
             style={{ cursor: 'pointer' }}
           />
           {/* TEXT UNDERNEATH THE IMAGES */}
           <figcaption>
-            <p>{img.title}</p>
-            <p>{img.price}</p>
+            <p>{item.title}</p>
+            <p>{item.price}</p>
           </figcaption>
         </figure>
       ))}
