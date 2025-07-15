@@ -34,24 +34,22 @@ section.shoppingCart img {
 
   border-radius: 15px;
 
-  width: 200px;
-  height: 200px;
+  width: 2em;
+  height: 2em;
 }
 
 
 section.shoppingCart .btn {
-    width: 9.2em;
-    font-size: 0.85em;
+    width: 11em;
+    font-size: 1em;
     margin-top: 2em;
   }  
-
 
 section.shoppingCart .content {
   margin-left: 5em;
   color: #57402c;
   text-align: left;
 }
-
 
 section.shoppingCart .container {
     display: flex;
@@ -118,7 +116,7 @@ section p:first-of-type {
     font-weight: 200;
   }
   
-/****** CART ITEMS STYLES (REACT SPECIFIC) ******/
+/****** CART ITEM STYLES ******/
 .cart-items-list {
     display: flex;
     flex-direction: column;

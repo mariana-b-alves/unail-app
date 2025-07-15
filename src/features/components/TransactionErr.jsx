@@ -6,7 +6,6 @@ const TransactionErr = ({ onClose }) => {
   return (
     <section className="transactionErr open" onClick={onClose}>
       <article className="container-all">
-
         <article className="container-content">
           <div className="content">
             <i className="fa-solid fa-triangle-exclamation"></i>

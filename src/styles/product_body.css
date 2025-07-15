@@ -143,9 +143,6 @@ section.other-products:nth-of-type(4){
         margin-bottom: 9.3em;
     }
 
-      .content{
-        margin-left: 5em;
-      }
 
       section.product .addRemoveItemsCounter:not(.popup){
         display: flex;

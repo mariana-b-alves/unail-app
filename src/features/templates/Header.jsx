@@ -14,24 +14,17 @@ const Header = ({ totalItems, onCartClick, onMenuClick }) => {
       <nav>
         <ul>
           <li>
-            <Link to="/portfolio" className={location.pathname === '/portfolio' ? 'active' : ''}>
-              PORTEFÓLIO
-            </Link>
+            {/*WHEN THE USER'S ON THE PAGE, THE .active CLASS IS ADDED (THE BUTTON TURNS BROWN AND GETS AN LINE UNDERNEATH)*/}
+            <Link to="/portfolio" className={location.pathname === '/portfolio' ? 'active' : ''}> PORTEFÓLIO </Link>
           </li>
           <li>
-            <Link to="/prices" className={location.pathname === '/prices' ? 'active' : ''}>
-              PREÇÁRIO
-            </Link>
+            <Link to="/prices" className={location.pathname === '/prices' ? 'active' : ''}> PREÇÁRIO </Link>
           </li>
           <li>
-            <Link to="/store" className={location.pathname === '/store' ? 'active' : ''}>
-              LOJA
-            </Link>
+            <Link to="/store" className={location.pathname === '/store' ? 'active' : ''}> LOJA </Link>
           </li>
           <li>
-            <Link to="/contacts" className={location.pathname === '/contacts' ? 'active' : ''}>
-              CONTACTOS
-            </Link>
+            <Link to="/contacts" className={location.pathname === '/contacts' ? 'active' : ''}> CONTACTOS </Link>
           </li>
         </ul>
         <div className="nav-icons">

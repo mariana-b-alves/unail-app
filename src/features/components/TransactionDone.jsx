@@ -1,12 +1,10 @@
 import '../../styles/form.css';
 import PropTypes from 'prop-types';
 
-/*SAME AS JS*/
 const TransactionDone = ({ onClose }) => {
   return (
     <section className="transactionDone open" onClick={onClose}>
       <article className="container-all">
-
         <article className="container-content">
           <div className="content">
             <i className="fa-regular fa-circle-check"></i>

@@ -7,11 +7,12 @@ import PropTypes from 'prop-types';
 import '../../styles/form.css';
 import '../../styles/trans_done_err.css';
 
-/*SAME AS JS*/
-const ShoppingCart = ({ isOpen, onClose, onConfirm }) => {
-  const { cartItems, removeFromCart, clearCart } = useContext(CartContext);
-  const [setTransactionResult] = useState(null); 
 
+const ShoppingCart = ({ isOpen, onClose, onConfirm }) => {
+  const { cartItems, removeFromCart } = useContext(CartContext);
+  const [] = useState(null); 
+
+  /*CALCULATES THE TOTAL PRICES OF EVERY SINGLE ITEM SELECTED BY THE USER*/
   const totalPrice = cartItems
     .reduce((sum, item) => {
       const product = productData[item.id];
@@ -22,34 +23,13 @@ const ShoppingCart = ({ isOpen, onClose, onConfirm }) => {
   const handleConfirm = async () => {
     onClose();
     onConfirm();
-
-    const formData = new FormData();
-    formData.append('cart', JSON.stringify(cartItems));
-    formData.append('total', totalPrice);
-    formData.append('message', 'Obrigado pela sua encomenda! Responda a este email para concluir a sua compra.');
-
-      const res = await fetch('https://formspree.io/f/xldnzjyd', {
-        method: 'POST',
-        body: formData,
-      });
-
-      const data = await res.json();
-
-      if (res.ok && data.ok) {
-        clearCart();
-        setTransactionResult('success');
-      } else {
-        setTransactionResult('error');
-      }
   };
-
-  if (!isOpen) return null;
 
   return (
     <>
       <section className={`shoppingCart ${isOpen ? 'open' : ''}`} onClick={onClose}>
-        <div className="container" onClick={(e) => e.stopPropagation()}>
-          <a className="closeBtn" onClick={onClose} role="button" tabIndex={0} aria-label="Close shopping cart" onKeyDown={(e) => { if (e.key === 'Enter') onClose(); }}>&times;</a>
+        <div className="container">
+          <a className="closeBtn" onClick={onClose} role="button" tabIndex={0} aria-label="Close shopping cart">&times;</a>
           {cartItems.length === 0 ? (
             <p>Carrinho vazio</p>
           ) : (
@@ -76,7 +56,7 @@ const ShoppingCart = ({ isOpen, onClose, onConfirm }) => {
                           <p>
                             Cor:&nbsp;
                             <span
-                              style={{ display: 'inline-block', width: '16px', height: '16px', borderRadius: '50%', backgroundColor: item.color, border: '1px solid #999', verticalAlign: 'middle'
+                              style={{ display: 'inline-block', width: '16px', height: '16px', borderRadius: '50%', backgroundColor: item.color, border: '2px solid #000000', verticalAlign: 'middle'
                               }}
                               title={item.color}
                             />
@@ -90,7 +70,7 @@ const ShoppingCart = ({ isOpen, onClose, onConfirm }) => {
                 })}
                 {/*ADDS TOTAL FINAL JUST OUTSIDE THE ARTICLE WHEN EVERTHING ELSE IS (SO THE TOTAL FINAL DOESN'T APPEAR EVERYTIME A NEW ITEM'S ADDED)*/}
                 {cartItems.length > 0 && (
-                   <p style={{ color: '#57402c', textAlign:'center', marginTop: '1em' }}>
+                   <p style={{ color: '#57402c', textAlign:'center', marginTop: '1em', fontSize: '1.4em', fontWeight: '600'}}>
                      Total Final: {totalPrice}€
                     </p>
                 )}
@@ -102,9 +82,7 @@ const ShoppingCart = ({ isOpen, onClose, onConfirm }) => {
             </>
           )}
         </div>
-        
       </section>
-     
     </>
   );
 };

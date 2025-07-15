@@ -179,9 +179,9 @@ section.contacts .btn {
       align-items: center;
     }
   
-    .container-all {
+    section.transactionForm .container-all {
       flex-direction: row;
-      height: 90vh;
+      height: 100vh;
     }
   
     .container-product {

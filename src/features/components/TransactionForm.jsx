@@ -137,66 +137,31 @@ const TransactionForm = ({ onClose }) => {
             <article
               key={`${item.id}-${item.color}`}
               className="content"
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                width: '100%',
-                maxWidth: '10em',
-                margin: '0 auto',
-              }}
-            >
+              style={{display: 'flex',flexDirection: 'column',width: '100%',maxWidth: '10em',margin: '0 auto'}}>
               <figure
                 className="c1xr3"
-                style={{
-                  width: '6em',
-                  height: '6em',
-                  borderRadius: '15px',
-                  overflow: 'hidden',
-                  margin: 0,
-                  marginBottom: '0.5em',
-                }}
-              >
+                style={{width: '6em', height: '6em', borderRadius: '15px', overflow: 'hidden', margin: 0, marginBottom: '0.5em',}}>
                 <img
                   src={item.image}
                   alt={item.description}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    display: 'block',
-                  }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block',}}
                 />
               </figure>
               <div className="product-text">
-                <p style={{ margin: '0.1em 0' }}>{item.description}</p>
-                <p style={{ margin: '0.1em 0' }}>{item.title}</p>
+                <p>{item.description}</p>
+                <p>{item.title}</p>
                 {item.color && (
-                  <p style={{ margin: '0.1em 0' }}>
+                  <p>
                     Cor:
-                    <span
-                      style={{
-                        display: 'inline-block',
-                        width: '.7em',
-                        height: '.7em',
-                        borderRadius: '50%',
-                        backgroundColor: item.color,
-                        marginLeft: '.3em',
-                        verticalAlign: 'middle',
-                        border: '1px solid #000',
-                      }}
-                    />
-                  </p>
+                    <span style={{display: 'inline-block', width: '.7em', height: '.7em', borderRadius: '50%', backgroundColor: item.color, marginLeft: '.3em', verticalAlign: 'middle', border: '2px solid #000'}}/></p>
                 )}
-                <p style={{ margin: '0.1em 0' }}>{item.price.toFixed(2)}€</p>
-                <article
-                  className="addRemoveItemsCounter"
-                  style={{ margin: '0.1em 0' }}
-                >
+                <p>{item.price.toFixed(2)}€</p>
+                <article className="addRemoveItemsCounter">
                   <div className="add">
                     <p>{item.quantity}</p>
                   </div>
                 </article>
-                <p style={{ margin: '0.1em 0' }}>
+                <p style={{marginBottom: '2.4em', fontWeight: '600', fontSize: '1.2em'}}>
                   Total: {(item.price * item.quantity).toFixed(2)}€
                 </p>
               </div>

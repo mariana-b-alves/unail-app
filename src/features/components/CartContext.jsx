@@ -20,11 +20,11 @@ export const CartProvider = ({ children }) => {
   /*ADD A NEW PRODUCT TO CART OR ADD IF THERE'S AT LEAST ONE INSIDE IT*/
   const addToCart = (product) => {
     /*CHECK IF THE ITEM'S THERE*/
-    const quantity = product.quantity > 0 ? product.quantity : 1;
+    const quantity = product.quantity && product.quantity > 0 ? product.quantity : 1;
 
     setCartItems(prev =>
       prev.some(item => item.id === product.id && item.color === product.color)
-        /*IF SO, ADD MORE TO IT...*/
+        /*IF SO, ADD MORE (IN QUANTITY) TO IT...*/
         ? prev.map(item =>
             item.id === product.id && item.color === product.color
               ? { ...item, quantity: item.quantity + quantity }

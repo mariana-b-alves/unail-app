@@ -23,7 +23,6 @@ section.transactionDone.open, section.transactionErr.open {
   cursor: pointer;
 }
 
-
 section.transactionDone .btn, section.transactionErr .btn {
   display: block;
   margin-left: auto;
@@ -41,27 +40,6 @@ section.transactionDone .container-all, section.transactionErr .container-all {
   flex-direction: column;
   align-items: center;
 
-}
-
-section.shoppingCart .content {
-  margin-left: 5em;
-  color: #57402c;
-  text-align: left;
-}
-
-section.shoppingCart .container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-  background-color: #f4f1ed;
-  border-radius: 15px;
-  padding: 3em 1.45em;
-
-  width: auto;
-  height: auto;
-  max-width: 800px;
 }
 
 section.transactionDone .closeBtn, section.transactionErr .closeBtn {
@@ -105,12 +83,6 @@ section.transactionDone p:last-of-type {
 }
 
 /******** BUTTON STYLES ********/
-
-#confirmBtn, #cancelBtn {
-  margin-top: 0.7em;
-  margin-right: 0.8em;
-  cursor: pointer;
-}
 
 .btn {
   margin-top: 2em;
