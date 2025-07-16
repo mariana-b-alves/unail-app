@@ -17,7 +17,7 @@ const PortfolioPopup = () => {
   return (
     <>
       <section className="title">
-        <h1>PORTEFÓLIO</h1>
+        <h1>GALERIA</h1>
       </section>
 
     {/*IMAGES*/}

@@ -69,15 +69,21 @@ const ProductDetail = () => {
   return (
     <div>
       <Header
-          totalItems={totalItems}
-          onCartClick={() => setCartOpen(true)}
-          onMenuClick={() => setSideMenuOpen(true)}
-        />
+        totalItems={totalItems}
+        onCartClick={() => setCartOpen(true)}
+        onMenuClick={() => setSideMenuOpen(true)}
+      />
 
-        <SideNav isOpen={sideMenuOpen} onClose={() => setSideMenuOpen(false)} />
+      <SideNav isOpen={sideMenuOpen} onClose={() => setSideMenuOpen(false)} />
 
+      <main style={{ flexGrow: 1, paddingBottom: '4.3em' }}>
+        {/*BACK BTN WHICH RETURNS TO STORE*/}
+        <div style={{ padding: '1rem' }}>
+          <Link to="/store" className="back-btn">
+            ← Voltar à Loja
+          </Link>
+        </div>
 
-      <main style={{ flexGrow: 1, paddingBottom: '100px' }}>
         <section className="product">
           <figure className="c1xr3">
             <img src={product.image} alt={product.title} />
@@ -149,10 +155,7 @@ const ProductDetail = () => {
       </main>
 
       <Footer />
-
     </div>
-
-    
   );
 };
 

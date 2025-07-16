@@ -28,7 +28,7 @@ const PricesPage = () => {
 
         <main>
           <section style={{ color: '#57402c' }} className="title">
-            <h1>PREÇÁRIO</h1>
+            <h1>SERVIÇOS</h1>
           </section>
 
           <section className="subtitle">

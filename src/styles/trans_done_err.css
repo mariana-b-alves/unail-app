@@ -12,6 +12,7 @@ section.transactionDone, section.transactionErr {
   transition: opacity 0.3s ease;
 
   z-index: 101;
+  
 }
 
 section.transactionDone.open, section.transactionErr.open {
@@ -31,10 +32,15 @@ section.transactionDone .btn, section.transactionErr .btn {
 }
 
 /******* CONTAINER STYLES *******/
+section.transactionDone .content, section.transactionErr .content {
+  margin-left: 5em;
+  margin-right: 5em;
+
+}
 section.transactionDone .container-all, section.transactionErr .container-all {
   position: relative;
 
-  margin: auto;
+  padding-bottom: 3em;
   
   display: flex;
   flex-direction: column;

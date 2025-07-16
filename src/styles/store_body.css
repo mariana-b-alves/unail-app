@@ -95,7 +95,7 @@ section.store:nth-of-type(6){
         flex-direction: column;
     }
 
-      .content{
+      article.content{
         margin-left: 5em;
       }
 

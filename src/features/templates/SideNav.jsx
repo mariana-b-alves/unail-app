@@ -12,8 +12,8 @@ const SideNav = ({ isOpen, onClose }) => (
         {/*X CLOSES THE SIDENAV*/}
         <a className="closeBtn" onClick={onClose}>&times;</a>
 
-        <Link to="/portfolio">PORTEFÓLIO</Link>
-        <Link to="/prices">PREÇÁRIO</Link>
+        <Link to="/portfolio">GALERIA</Link>
+        <Link to="/prices">SERVIÇOS</Link>
         <Link to="/store">LOJA</Link>
         <Link to="/contacts">CONTACTOS</Link>
       </article>

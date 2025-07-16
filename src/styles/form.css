@@ -154,6 +154,8 @@ section.transactionForm {
   }
   
   .closeBtn {
+    top: 0;
+
     position: absolute;
 
     cursor: pointer;
